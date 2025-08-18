@@ -41,7 +41,7 @@ def main():
     name = input("What's your name? ")
     def hello():
         # name is accessible here because it is in the same scope as the hello function
-        print(name)
-    hello()
+        return "Hello " + name
+    print(hello())
     
 main()
