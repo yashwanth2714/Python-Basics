@@ -13,6 +13,9 @@ name = name.strip()
 # This will capitalize the first letter of each word in the name
 name = name.title()
 
+# Destructuring the name into first and last
+first, last = name.split(" ")
+
 """
 Multi-line Comment:
 
@@ -27,4 +30,4 @@ print("Hello,", name , "!", sep="--", end="Good ")
 
 # f-string for formatted string literals
 # f-string allows you to embed expressions inside string literals, using curly braces {}
-print(f"Bye {name} {0 + 1} th")
+print(f"Bye {first} {0 + 1} th")
