@@ -21,3 +21,12 @@ for i in range(3):
 # It is used when you don't need the variable. For example, when you just want to repeat something a certain number of times
 for _ in range(3):
     print("hey")
+
+
+# You can multiply strings in Python
+# prints "meowmeowmeow"
+print("meow" * 3)
+
+
+# end="" prevents the extra newline that print adds by default
+print("meow\n" * 3, end="")
