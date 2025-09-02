@@ -34,3 +34,15 @@ for student in studentsList:
     print(student)
     for each in student:
         print(each, student[each], sep=": ")
+        
+        
+
+size = 3
+for i in range(size):
+    for j in range(size):
+        print("*", end="") 
+    print("")
+    
+
+for i in range(size):
+    print("#" * size)
