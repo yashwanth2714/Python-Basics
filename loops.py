@@ -58,3 +58,10 @@ def meow(n):
         print("meow")
     
 main()
+
+
+students = ["Hermione", "Harry", "Ron"]
+print(students)
+print(students[0])
+for i in range(len(students)):
+    print(i+1, students[i])
