@@ -32,12 +32,29 @@
 # print("meow\n" * 3, end="")
 
 
-# Ask user for a positive integer. Keep asking until they provide a positive integer.
-# This is a common pattern for input validation.
-while True:
-    n= int(input("What's n? "))
-    if n > 0:
-        break
+# # Ask user for a positive integer. Keep asking until they provide a positive integer.
+# # This is a common pattern for input validation.
+# while True:
+#     n= int(input("What's n? "))
+#     if n > 0:
+#         break
     
-for _ in range(n):
-    print("meow")
+# for _ in range(n):
+#     print("meow")
+
+def getNumber():
+    while True:
+        n = int(input("What's n? "))
+        if n > 0:
+            # return breaks out of the function and loop is also exited because return exits the function
+            return n
+
+def main():
+    number= getNumber()
+    meow(number)
+    
+def meow(n):
+    for _ in range(n):
+        print("meow")
+    
+main()
