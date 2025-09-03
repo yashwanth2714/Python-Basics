@@ -8,13 +8,28 @@
 # print(f"x is {x}")
 
 
-try:
-    x = int(input("What's x? "))
-except ValueError:
-    print("x is not an integer")
-else:
-    # else block is executed if no exception occurs in the try block. If an exception occurs, the else block is skipped.
-    print(f"x is {x}")
-finally:
-    # finally block is always executed, regardless of whether an exception occurs or not. It is typically used for cleanup actions.
-    print("This is the finally block. It is always executed.")
+# try:
+#     x = int(input("What's x? "))
+# except ValueError:
+#     print("x is not an integer")
+# else:
+#     # else block is executed if no exception occurs in the try block. If an exception occurs, the else block is skipped.
+#     print(f"x is {x}")
+# finally:
+#     # finally block is always executed, regardless of whether an exception occurs or not. It is typically used for cleanup actions.
+#     print("This is the finally block. It is always executed.")
+
+
+# Keep asking the user for an integer until they provide a valid integer
+while True:
+    try:
+        x = int(input("What's x? "))
+    except ValueError:
+        # if a ValueError occurs, print the message and continue the loop to ask for input again
+        print("x is not an integer")
+    else:
+        # if no exception occurs, break out of the loop
+        break
+
+# prints the valid integer provided by the user
+print(f"x is {x}")
