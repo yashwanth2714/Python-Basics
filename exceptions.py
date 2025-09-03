@@ -44,6 +44,9 @@ def get_int():
         try:
             return int(input("What's x? "))
         except ValueError:
-            print("x is not an integer")
+            # pass means do nothing. It is a placeholder when a statement is required syntactically but you don't want to do anything.
+            # The difference between pass and continue is that continue skips the rest of the loop and goes to the next iteration, whereas pass does nothing and the loop continues normally. For example, if you had some code after the try-except block, using continue would skip that code, whereas pass would allow that code to run.
+            pass
+        print("after the except block")
             
 main()
