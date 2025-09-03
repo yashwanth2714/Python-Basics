@@ -36,13 +36,13 @@
 
 
 def main():
-    x = get_int()
+    x = get_int("What's x? ")
     print(f"x is {x}")
 
-def get_int():
+def get_int(prompt):
     while True:
         try:
-            return int(input("What's x? "))
+            return int(input(prompt))
         except ValueError:
             # pass means do nothing. It is a placeholder when a statement is required syntactically but you don't want to do anything.
             # The difference between pass and continue is that continue skips the rest of the loop and goes to the next iteration, whereas pass does nothing and the loop continues normally. For example, if you had some code after the try-except block, using continue would skip that code, whereas pass would allow that code to run.
