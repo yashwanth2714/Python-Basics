@@ -20,16 +20,30 @@
 #     print("This is the finally block. It is always executed.")
 
 
-# Keep asking the user for an integer until they provide a valid integer
-while True:
-    try:
-        x = int(input("What's x? "))
-    except ValueError:
-        # if a ValueError occurs, print the message and continue the loop to ask for input again
-        print("x is not an integer")
-    else:
-        # if no exception occurs, break out of the loop
-        break
+# # Keep asking the user for an integer until they provide a valid integer
+# while True:
+#     try:
+#         x = int(input("What's x? "))
+#     except ValueError:
+#         # if a ValueError occurs, print the message and continue the loop to ask for input again
+#         print("x is not an integer")
+#     else:
+#         # if no exception occurs, break out of the loop
+#         break
 
-# prints the valid integer provided by the user
-print(f"x is {x}")
+# # prints the valid integer provided by the user
+# print(f"x is {x}")
+
+
+def main():
+    x = get_int()
+    print(f"x is {x}")
+
+def get_int():
+    while True:
+        try:
+            return int(input("What's x? "))
+        except ValueError:
+            print("x is not an integer")
+            
+main()
